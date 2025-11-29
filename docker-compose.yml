@@ -1,0 +1,21 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  e2e-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: anysports-e2e-tests
+    volumes:
+      - ./test-results:/app/test-results
+      - ./playwright-report:/app/playwright-report
+    environment:
+      - CI=true
+      - PLAYWRIGHT_HEADLESS=true
+    networks:
+      - e2e-network
+
+networks:
+  e2e-network:
+    driver: bridge

@@ -1,5 +1,5 @@
 {
-  "name": "e2e-testing-of-the-order-creation-process",
+  "name": "anysports-e2e-tests",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -7,10 +7,12 @@
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
-    "test:ci": "playwright test --reporter=line"
+    "test:ci": "playwright test --reporter=line",
+    "test:docker": "docker-compose up --build --abort-on-container-exit"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0",
-    "typescript": "^5.3.0"
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
   }
 }
