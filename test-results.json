@@ -1,0 +1,218 @@
+{
+  "config": {
+    "configFile": "/Users/sergeypozharitsky/Desktop/develop/playwright/anysports-e2e-tests/playwright.config.ts",
+    "rootDir": "/Users/sergeypozharitsky/Desktop/develop/playwright/anysports-e2e-tests/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "line",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/sergeypozharitsky/Desktop/develop/playwright/anysports-e2e-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sergeypozharitsky/Desktop/develop/playwright/anysports-e2e-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.57.0",
+    "workers": 1,
+    "webServer": {
+      "command": "echo \"No server to start\"",
+      "url": "https://dev.anysports.tv/v2/ru/payment/create/677?p=1",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "order-process.spec.ts",
+      "file": "order-process.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "E2E тесты процесса создания заказа",
+          "file": "order-process.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "ПОЗИТИВНЫЙ СЦЕНАРИЙ: Успешная оплата с промокодом",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 24668,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🚀 ЗАПУСК ПОЗИТИВНОГО СЦЕНАРИЯ\n"
+                        },
+                        {
+                          "text": "📝 ШАГ 1: Открытие страницы оплаты\n"
+                        },
+                        {
+                          "text": "✅ Открыта страница оплаты с промокодом\n"
+                        },
+                        {
+                          "text": "✅ Страница оплаты успешно загружена\n"
+                        },
+                        {
+                          "text": "📝 ШАГ 2: Заполнение формы заказа\n"
+                        },
+                        {
+                          "text": "📝 Заполнение формы\n"
+                        },
+                        {
+                          "text": "🎁 Применение промокода: qa\n"
+                        },
+                        {
+                          "text": "🎁 Промокод \"qa\" применился\n"
+                        },
+                        {
+                          "text": "📝 ШАГ 3: Выбор платежного способа\n"
+                        },
+                        {
+                          "text": "💳 Выбор платежного метода: card\n"
+                        },
+                        {
+                          "text": "ℹ️  Платежный метод выбран автоматически\n"
+                        },
+                        {
+                          "text": "📝 ШАГ 4: Ждем загрузки платежной формы\n"
+                        },
+                        {
+                          "text": "📝 ШАГ 5: Заполнение данных карты\n"
+                        },
+                        {
+                          "text": "💳 Заполнение данных карты\n"
+                        },
+                        {
+                          "text": "✅ Данные карты заполнены\n"
+                        },
+                        {
+                          "text": "📝 ШАГ 6: Отправка платежа\n"
+                        },
+                        {
+                          "text": "💰 Отправка платежа\n"
+                        },
+                        {
+                          "text": "🔍 ШАГ 7: Проверка промежуточной страницы\n"
+                        },
+                        {
+                          "text": "🔍 Проверка промежуточной страницы обработки\n"
+                        },
+                        {
+                          "text": "✅ Индикатор загрузки отображается\n"
+                        },
+                        {
+                          "text": "✅ Находимся на промежуточной странице обработки платежа\n"
+                        },
+                        {
+                          "text": "🔍 ШАГ 8: Промежуточная страница спасибо с допродажами\n"
+                        },
+                        {
+                          "text": "⏳ Ожидание перехода на страницу благодарности\n"
+                        },
+                        {
+                          "text": "✅ Успешно перешли на страницу благодарности\n"
+                        },
+                        {
+                          "text": "🔍 ШАГ 9: Проверка страницы благодарности\n"
+                        },
+                        {
+                          "text": "🔍 Проверка страницы благодарности\n"
+                        },
+                        {
+                          "text": "✅ Сообщение: Промежуточная страница спасибо с допродажами:\n"
+                        },
+                        {
+                          "text": "✅ Страница благодарности успешно загружена\n"
+                        },
+                        {
+                          "text": "🎉 ПОЗИТИВНЫЙ СЦЕНАРИЙ УСПЕШНО ЗАВЕРШЕН!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-29T16:38:22.022Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7f253ab2e26fbbc0e513-ae6b30bfa203d459535c",
+              "file": "order-process.spec.ts",
+              "line": 10,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-29T16:38:20.207Z",
+    "duration": 26658.906000000425,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
